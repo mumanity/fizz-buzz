@@ -1,9 +1,11 @@
 $(document).ready(function() {
+	$('#userInput').focus();
 	
 	$('#submit').on('click', function() {
 		$('.results').empty();
 		fizzBuzz();
 		$('#userInput').val('');
+		$('#userInput').focus();
 	});
 
 	$('#userInput').on('keydown', function(e) {

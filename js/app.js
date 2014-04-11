@@ -3,6 +3,7 @@ $(document).ready(function() {
 	
 	$('#submit').on('click', function() {
 		$('.results').empty();
+		checkNumber();
 		fizzBuzz();
 		$('#userInput').val('');
 		$('#userInput').focus();
@@ -11,6 +12,7 @@ $(document).ready(function() {
 	$('#userInput').on('keydown', function(e) {
 		if (e.keyCode ==13) {
 			$('.results').empty();
+			checkNumber();
 			fizzBuzz();
 			$('#userInput').val('');
 			$(this).focus();
@@ -20,6 +22,15 @@ $(document).ready(function() {
 
 });
 
+function checkNumber() {
+     var number = +$('input[id=userInput]').val();
+     if (isNaN(number)) {
+          alert("OH NOES! You entered something that wasn't a number!");
+     }
+     else {
+          fizzBuzz();
+     }
+}﻿
 
 function fizzBuzz() {
 	var answer = +$('input[id=userInput]').val();

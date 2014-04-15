@@ -1,10 +1,10 @@
 $(document).ready(function() {
+	alert("To play FizzBuzz, simply enter a number in the provided field and watch the magic!");
 	$('#userInput').focus();
 	
 	$('#submit').on('click', function() {
 		$('.results').empty();
 		checkNumber();
-		fizzBuzz();
 		$('#userInput').val('');
 		$('#userInput').focus();
 	});
@@ -13,7 +13,6 @@ $(document).ready(function() {
 		if (e.keyCode ==13) {
 			$('.results').empty();
 			checkNumber();
-			fizzBuzz();
 			$('#userInput').val('');
 			$(this).focus();
 		}
